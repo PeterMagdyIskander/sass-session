@@ -1,0 +1,27 @@
+ @mixin removePaddingMargin() {
+    padding: 0;
+    margin: 0;
+  }
+  
+
+@mixin displayFlex($flex-direction-column, $justify-content){
+    display: flex;
+    @if $flex-direction-column{
+        flex-direction: column;
+    }
+    justify-content: $justify-content;
+}
+
+
+
+@mixin createHeader($margin, $title, $margin-top-bottom, $margin-left-right) {
+    .header-#{$title} {
+      width: fit-content;
+      #{ $margin}: #{$margin-top-bottom}px #{$margin-left-right};
+    }
+  }
+
+
+
+
+  
